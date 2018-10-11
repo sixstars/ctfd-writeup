@@ -21,3 +21,5 @@ $ nc pwn.sixstars.team 22000
 说明，这道题是连接到了服务端一个shell上，其中当前目录下有flag文件， 运行cat flag:
 ![](b.png)
 顺利地拿到了flag
+
+
