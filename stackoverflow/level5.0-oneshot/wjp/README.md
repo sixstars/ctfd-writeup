@@ -4,7 +4,7 @@
 
 ### 关键词：带出cookie，mprotect，rop
 ### 分析
-####先用IDA32反编译，看到main函数调用了stackoverflow()，进入stackoverflow()
+#### 先用IDA32反编译，看到main函数调用了stackoverflow()，进入stackoverflow()
 ![](2.png)
 #### 1. 观察到，一共需要我们输入两次，第一次是将名字输入v0的地址处，第二次是将信息输入到s地址处。其中，第一次输入名字后，会将它再输出，因为输出字符串所以遇到“\x00”会停下。而Cookie的最低bytes是0，按照小端法，低位在低地址，我们的输入会先覆盖“\x00”。将"\x00"覆盖为其它值，输出便会将cookie的其它位带出，cookie就成功绕过了
 #### 2. 绕过cookie后, 想办法注入shellcode，gdb检查内存空间的权限，发现并没有rwx段能够执行代码。

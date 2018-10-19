@@ -17,7 +17,7 @@
 - 将解题脚本和README.MD文档放至新建的文件夹中([markdown](http://www.markdown.cn/))
 ```
   如果要写level0-bash的write-up, 进入stackoverflow文件夹中的level0-bash文件夹，
-  新建vampire文件夹，在其中放入写好的writeu和脚本。
+  新建vampire文件夹，在其中放入写好的writeup和脚本。
 ```
 - 将变动push到远程自己的分支
 ```
