@@ -13,7 +13,7 @@ $ nc pwn.sixstars.team 22000
 * nc 192.168.1.100 80: 与192.168.1.100下的80端口的server连接
 * 传文件B->A：
     - A: nc -l 8080 > file.txt
-    - B: nc 192.168.1.100 8080 --send-only < data.txt
+    - B: ncat 192.168.1.100 8080 --send-only < data.txt
 * ncat -l 10000 -e /bin/bash: 开后门
 
 ##### 把命令复制到终端运行, 程序没有反应，运行ls,发现下方显示了几个文件
