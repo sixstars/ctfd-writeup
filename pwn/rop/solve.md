@@ -1,0 +1,4 @@
+和stackoverflow的level5-oneshot差不多
+用rop先进行mprotect开rwx区域，然后调用read()函数读入shell，最后返回到shell
+和level5-oneshot不同的是：这题没有canary，省去了oneshot泄露的步骤，oneshot用的是get_line，这题用read()，其他都一样
+脚本参考jpwan的level5-oneshot
